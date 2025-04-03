@@ -101,7 +101,7 @@ export const channelRouter = {
        * won't yield if it's the same as last time
        */
       function* maybeYield(who: WhoIsTyping) {
-        const idx = Object.keys(who).toSorted().toString();
+        const idx = Object.keys(who).sort().toString();
         if (idx === lastIsTyping) {
           return;
         }
